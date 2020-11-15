@@ -26,5 +26,17 @@ namespace SalesWebMVC.Services
             _context.Add(seller);
             _context.SaveChanges(); //persiste a atualização no banco de dados
         }
+
+        public Seller FindById(int id)
+        {
+            return _context.Seller.Where(obj => obj.Id == id).First();
+        }
+
+        public void Remove(int id)
+        {
+            var obj = _context.Seller.Find(id);
+            _context.Seller.Remove(obj);
+            _context.SaveChanges(); //persiste a atualização no banco de dados
+        }
     }
 }
