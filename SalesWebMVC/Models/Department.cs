@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace SalesWebMVC.Models
@@ -7,6 +8,8 @@ namespace SalesWebMVC.Models
     public class Department
     {
         public int Id { get; set; }
+        [Required]
+        [StringLength(40, MinimumLength = 5, ErrorMessage = "Department Name size must be between {2} and {1}")]
         public string Name { get; set; }
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
 
