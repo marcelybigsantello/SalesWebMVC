@@ -21,6 +21,7 @@ namespace SalesWebMVC.Controllers
             ViewData["Message"] = "Sales Web MVC Application from C# Course";
             ViewData["author"] = "Marcely Biguzzi Santello";
             ViewData["text"] = "Primeiro sistema Web escrito em C# com Core MVC e Entity Framwork";
+            ViewData["email"] = "marcely@sbsoftware.com.br";
             
             return View();
         }
