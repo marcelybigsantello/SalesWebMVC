@@ -28,8 +28,10 @@ namespace SalesWebMVC.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
+            ViewData["Message"] = "Some ways to talk to me :)";
+            ViewData["author"] = "Marcely Biguzzi Santello";
+            ViewData["linkedin"] = "www.linkedin.com";
+ 
             return View();
         }
 
