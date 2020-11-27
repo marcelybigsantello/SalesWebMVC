@@ -60,7 +60,7 @@ namespace SalesWebMVC.Services
                 _context.Seller.Remove(obj);
                 await _context.SaveChangesAsync(); //persiste a atualização no banco de dados
             }
-            catch (DbUpdateException e)
+            catch (DbUpdateException)
             {
                 throw new IntegrityException("Cannot delete this seller because she / he has sales records");
             }
